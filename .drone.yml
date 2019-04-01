@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+clone:
+  depth: 5
+
+steps:
+- name: test
+  image: buildpack-deps:16.04-scm
+  commands:
+  - pwd
+  - echo Hello
